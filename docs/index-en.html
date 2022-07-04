@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Security Graph Databases Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/OntoSecurityGraphDB/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/OntoSecurityGraphDB/","name":"Security Graph Databases Ontology", "headline":"Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.", "datePublished":"2022-06-30T13:24:01", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Alejandro Maté, (Universidad de Alicante)"},{"@type":"Person","name":"Carlos Blanco, (Universidad de Cantabria)"},{"@type":"Person","name":"Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"},{"@type":"Person","name":"Juan Trujillo, (Universidad de Alicante)"},{"@type":"Person","name":"Manuel Paneque, (Universidad de Málaga)"},{"@type":"Person","name":"María del Mar Roldán-García, (Universiad de Málaga)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Security Graph Databases Ontology</h1>
+<h2>Release 2022-06-30T13:24:01</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/OntoSecurityGraphDB/">https://w3id.org/OntoSecurityGraphDB/</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/OntoSecurityGraphDB/">https://w3id.org/OntoSecurityGraphDB/</a></dd>
+<dt>Issued on: </dt>
+<dd>2022-06-30T13:24:01</dd>
+<dt>Authors:</dt>
+<dd>Alejandro Maté, (Universidad de Alicante)</dd><dd>Carlos Blanco, (Universidad de Cantabria)</dd><dd>Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)</dd><dd>Juan Trujillo, (Universidad de Alicante)</dd><dd>Manuel Paneque, (Universidad de Málaga)</dd><dd>María del Mar Roldán-García, (Universiad de Málaga)</dd>
+
+<dt>Publisher:</dt>
+<dd>Aether Group</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="https://w3id.org/OntoGraphDB/">&lt;https://w3id.org/OntoGraphDB/&gt;</a></dd>
+
+<dt>License:</dt><dd><a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-https://opensource.org/licenses/MIT-blue.svg" alt="https://opensource.org/licenses/MIT" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Alejandro Maté, (Universidad de Alicante), Carlos Blanco, (Universidad de Cantabria), Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha), Juan Trujillo, (Universidad de Alicante), Manuel Paneque, (Universidad de Málaga), María del Mar Roldán-García, (Universiad de Málaga). Security Graph Databases Ontology. Retrieved from: https://w3id.org/OntoSecurityGraphDB/</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Security Graph Databases Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#Create" title="https://w3id.org/OntoSecurityGraphDB/Create">Create</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/Database" title="https://w3id.org/OntoGraphDB/Database">Database</a>
+   </li>
+   <li>
+      <a href="#Delete" title="https://w3id.org/OntoSecurityGraphDB/Delete">Delete</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/Element" title="https://w3id.org/OntoGraphDB/Element">Element</a>
+   </li>
+   <li>
+      <a href="#Field" title="https://w3id.org/OntoSecurityGraphDB/Field">Field</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/NoSQLField" title="https://w3id.org/OntoGraphDB/NoSQLField">
+         <span>no s q l field</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/NoSQLFieldGraph" title="https://w3id.org/OntoGraphDB/NoSQLFieldGraph">
+         <span>no s q l field graph</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/Node" title="https://w3id.org/OntoGraphDB/Node">Node</a>
+   </li>
+   <li>
+      <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+   </li>
+   <li>
+      <a href="#Read" title="https://w3id.org/OntoSecurityGraphDB/Read">Read</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/OntoGraphDB/Relationship" title="https://w3id.org/OntoGraphDB/Relationship">Relationship</a>
+   </li>
+   <li>
+      <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+   </li>
+   <li>
+      <a href="#SecurityRule"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleElement"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement">Rule element</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleField"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleField">Rule field</a>
+   </li>
+   <li>
+      <a href="#Update" title="https://w3id.org/OntoSecurityGraphDB/Update">Update</a>
+   </li>
+   <li>
+      <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#DatabaseHasRole"
+         title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole">Database Has Role</a>
+   </li>
+   <li>
+      <a href="#DatabaseHasSecurityRule"
+         title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule">Database Has Security Rules</a>
+   </li>
+   <li>
+      <a href="#DatabaseHasUser"
+         title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser">Database Has User</a>
+   </li>
+   <li>
+      <a href="#RoleHasRules"
+         title="https://w3id.org/OntoSecurityGraphDB/RoleHasRules">Role has Rules</a>
+   </li>
+   <li>
+      <a href="#HasSubRole" title="https://w3id.org/OntoSecurityGraphDB/HasSubRole">Role Has Subrole</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleContainsPrivilege"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege">Rule contains Privilege</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleDefineElements"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements">Security rule define elements.</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleDefineField"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField">Security rule define field.</a>
+   </li>
+   <li>
+      <a href="#SecurityRuleDefined"
+         title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined">
+         <span>security rule defined</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UserHasRole" title="https://w3id.org/OntoSecurityGraphDB/UserHasRole">User has Role</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasPrivilege"
+         title="https://w3id.org/OntoSecurityGraphDB/hasPrivilege">Has Privileges</a>
+   </li>
+   <li>
+      <a href="#privilegeCondition"
+         title="https://w3id.org/OntoSecurityGraphDB/privilegeCondition">Privilege has Condition</a>
+   </li>
+   <li>
+      <a href="#roleName" title="https://w3id.org/OntoSecurityGraphDB/roleName">Role has Name</a>
+   </li>
+   <li>
+      <a href="#ruleName" title="https://w3id.org/OntoSecurityGraphDB/ruleName">Rule has name</a>
+   </li>
+   <li>
+      <a href="#ruleSign" title="https://w3id.org/OntoSecurityGraphDB/ruleSign">Rule has sign</a>
+   </li>
+   <li>
+      <a href="#userName" title="https://w3id.org/OntoSecurityGraphDB/userName">user has name</a>
+   </li>
+   <li>
+      <a href="#userPass" title="https://w3id.org/OntoSecurityGraphDB/userPass">User has Password</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Security Graph Databases Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Security Graph Databases Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Create" title="https://w3id.org/OntoSecurityGraphDB/Create">Create</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/Database" title="https://w3id.org/OntoGraphDB/Database">Database</a>
+      </li>
+      <li>
+         <a href="#Delete" title="https://w3id.org/OntoSecurityGraphDB/Delete">Delete</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/Element" title="https://w3id.org/OntoGraphDB/Element">Element</a>
+      </li>
+      <li>
+         <a href="#Field" title="https://w3id.org/OntoSecurityGraphDB/Field">Field</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/NoSQLField" title="https://w3id.org/OntoGraphDB/NoSQLField">
+            <span>no s q l field</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/NoSQLFieldGraph" title="https://w3id.org/OntoGraphDB/NoSQLFieldGraph">
+            <span>no s q l field graph</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/Node" title="https://w3id.org/OntoGraphDB/Node">Node</a>
+      </li>
+      <li>
+         <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+      </li>
+      <li>
+         <a href="#Read" title="https://w3id.org/OntoSecurityGraphDB/Read">Read</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/OntoGraphDB/Relationship" title="https://w3id.org/OntoGraphDB/Relationship">Relationship</a>
+      </li>
+      <li>
+         <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+      </li>
+      <li>
+         <a href="#SecurityRule"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleElement"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement">Rule element</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleField"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleField">Rule field</a>
+      </li>
+      <li>
+         <a href="#Update" title="https://w3id.org/OntoSecurityGraphDB/Update">Update</a>
+      </li>
+      <li>
+         <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+      </li>
+   </ul>
+   <div class="entity" id="Create">
+      <h3>Create<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Create</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/Database">
+      <h3>Database<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/Database</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#DatabaseHasRole"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole">Database Has Role</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#DatabaseHasSecurityRule"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule">Database Has Security Rules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#DatabaseHasUser"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser">Database Has User</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Delete">
+      <h3>Delete<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Delete</p>
+      <div class="comment">
+         <span class="markdown">This class represents the delete privilege associated with a security rule.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/Element">
+      <h3>Element<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/Element</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/Node" title="https://w3id.org/OntoGraphDB/Node">Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/OntoGraphDB/Relationship" title="https://w3id.org/OntoGraphDB/Relationship">Relationship</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#SecurityRuleDefineElements"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements">Security rule define elements.</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Field">
+      <h3>Field<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Field</p>
+      <div class="comment">
+         <span class="markdown">The Field class represents the concept of a security data field in any database.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/NoSQLField" title="https://w3id.org/OntoGraphDB/NoSQLField">no s q l field</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/NoSQLField">
+      <h3>no s q l field<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/NoSQLField</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Field" title="https://w3id.org/OntoSecurityGraphDB/Field">Field</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/NoSQLFieldGraph" title="https://w3id.org/OntoGraphDB/NoSQLFieldGraph">no s q l field graph</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/NoSQLFieldGraph">
+      <h3>no s q l field graph<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/NoSQLFieldGraph</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/NoSQLField" title="https://w3id.org/OntoGraphDB/NoSQLField">no s q l field</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/Node">
+      <h3>Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/Node</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/Element" title="https://w3id.org/OntoGraphDB/Element">Element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Privilege">
+      <h3>Privilege<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Privilege</p>
+      <div class="comment">
+         <span class="markdown">This class represents the privileges associated with a security rule.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Create" title="https://w3id.org/OntoSecurityGraphDB/Create">Create</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Delete" title="https://w3id.org/OntoSecurityGraphDB/Delete">Delete</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Read" title="https://w3id.org/OntoSecurityGraphDB/Read">Read</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Update" title="https://w3id.org/OntoSecurityGraphDB/Update">Update</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasPrivilege"
+               title="https://w3id.org/OntoSecurityGraphDB/hasPrivilege">Has Privileges</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#privilegeCondition"
+               title="https://w3id.org/OntoSecurityGraphDB/privilegeCondition">Privilege has Condition</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#SecurityRuleContainsPrivilege"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege">Rule contains Privilege</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Read">
+      <h3>Read<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Read</p>
+      <div class="comment">
+         <span class="markdown">This class represents the read privilege associated with a security rule.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/OntoGraphDB/Relationship">
+      <h3>Relationship<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoGraphDB/Relationship</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/OntoGraphDB/Element" title="https://w3id.org/OntoGraphDB/Element">Element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Role">
+      <h3>Role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Role</p>
+      <div class="comment">
+         <span class="markdown">This class represents the roles that are defined in a database.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#HasSubRole" title="https://w3id.org/OntoSecurityGraphDB/HasSubRole">Role Has Subrole</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#roleName" title="https://w3id.org/OntoSecurityGraphDB/roleName">Role has Name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#RoleHasRules"
+               title="https://w3id.org/OntoSecurityGraphDB/RoleHasRules">Role has Rules</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#DatabaseHasRole"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole">Database Has Role</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#HasSubRole" title="https://w3id.org/OntoSecurityGraphDB/HasSubRole">Role Has Subrole</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#UserHasRole" title="https://w3id.org/OntoSecurityGraphDB/UserHasRole">User has Role</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecurityRule">
+      <h3>Rule<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRule</p>
+      <div class="comment">
+         <span class="markdown">Security rule</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#SecurityRuleElement"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement">Rule element</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SecurityRuleField"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleField">Rule field</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#SecurityRuleContainsPrivilege"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege">Rule contains Privilege</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#ruleName" title="https://w3id.org/OntoSecurityGraphDB/ruleName">Rule has name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ruleSign" title="https://w3id.org/OntoSecurityGraphDB/ruleSign">Rule has sign</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#SecurityRuleDefined"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined">security rule defined</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#DatabaseHasSecurityRule"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule">Database Has Security Rules</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#RoleHasRules"
+               title="https://w3id.org/OntoSecurityGraphDB/RoleHasRules">Role has Rules</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecurityRuleElement">
+      <h3>Rule element<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement</p>
+      <div class="comment">
+         <span class="markdown">A rule that affects an element.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityRule"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#SecurityRuleDefineElements"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements">Security rule define elements.</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecurityRuleField">
+      <h3>Rule field<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleField</p>
+      <div class="comment">
+         <span class="markdown">A rule that affects a field.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#SecurityRule"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#SecurityRuleDefineField"
+               title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField">Security rule define field.</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Update">
+      <h3>Update<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/Update</p>
+      <div class="comment">
+         <span class="markdown">This class represents the update privilege associated with a security rule.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="User">
+      <h3>User<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/User</p>
+      <div class="comment">
+         <span class="markdown">The User class represents the users defined in the database management system.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#userPass" title="https://w3id.org/OntoSecurityGraphDB/userPass">User has Password</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#UserHasRole" title="https://w3id.org/OntoSecurityGraphDB/UserHasRole">User has Role</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#userName" title="https://w3id.org/OntoSecurityGraphDB/userName">user has name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#DatabaseHasUser"
+               title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser">Database Has User</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DatabaseHasRole"
+            title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole">Database Has Role</a>
+      </li>
+      <li>
+         <a href="#DatabaseHasSecurityRule"
+            title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule">Database Has Security Rules</a>
+      </li>
+      <li>
+         <a href="#DatabaseHasUser"
+            title="https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser">Database Has User</a>
+      </li>
+      <li>
+         <a href="#RoleHasRules"
+            title="https://w3id.org/OntoSecurityGraphDB/RoleHasRules">Role has Rules</a>
+      </li>
+      <li>
+         <a href="#HasSubRole" title="https://w3id.org/OntoSecurityGraphDB/HasSubRole">Role Has Subrole</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleContainsPrivilege"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege">Rule contains Privilege</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleDefineElements"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements">Security rule define elements.</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleDefineField"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField">Security rule define field.</a>
+      </li>
+      <li>
+         <a href="#SecurityRuleDefined"
+            title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined">
+            <span>security rule defined</span>
+         </a>
+      </li>
+      <li>
+         <a href="#UserHasRole" title="https://w3id.org/OntoSecurityGraphDB/UserHasRole">User has Role</a>
+      </li>
+   </ul>
+   <div class="entity" id="DatabaseHasRole">
+      <h3>Database Has Role<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole</p>
+      <div class="comment">
+         <span class="markdown">This property links the roles contained in that database.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/OntoGraphDB/Database" title="https://w3id.org/OntoGraphDB/Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DatabaseHasSecurityRule">
+      <h3>Database Has Security Rules<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule</p>
+      <div class="comment">
+         <span class="markdown">This property links the security rules contained in that database.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/OntoGraphDB/Database" title="https://w3id.org/OntoGraphDB/Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="DatabaseHasUser">
+      <h3>Database Has User<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser</p>
+      <div class="comment">
+         <span class="markdown">This property links the users contained in that database.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/OntoGraphDB/Database" title="https://w3id.org/OntoGraphDB/Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="RoleHasRules">
+      <h3>Role has Rules<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/RoleHasRules</p>
+      <div class="comment">
+         <span class="markdown">This property links the role with the rules.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="HasSubRole">
+      <h3>Role Has Subrole<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/HasSubRole</p>
+      <div class="comment">
+         <span class="markdown">Allows defining hierarchies between roles.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SecurityRuleContainsPrivilege">
+      <h3>Rule contains Privilege<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege</p>
+      <div class="comment">
+         <span class="markdown">Links the rule with the privilege that the rule grants or revokes</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SecurityRuleDefineElements">
+      <h3>Security rule define elements.<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements</p>
+      <div class="comment">
+         <span class="markdown">Security Rule define over elements.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#SecurityRuleDefined"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined">security rule defined</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRuleElement"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement">Rule element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/OntoGraphDB/Element" title="https://w3id.org/OntoGraphDB/Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SecurityRuleDefineField">
+      <h3>Security rule define field.<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField</p>
+      <div class="comment">
+         <span class="markdown">Security Rule define over field.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#SecurityRuleDefined"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined">security rule defined</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRuleField"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleField">Rule field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/OntoGraphDB/Field"
+                  target="_blank"
+                  title="https://w3id.org/OntoGraphDB/Field">field</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="SecurityRuleDefined">
+      <h3>security rule defined<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined</p>
+      <div class="comment">
+         <span class="markdown">Links the rule to the database artifact in which it is defined.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#SecurityRuleDefineElements"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements">Security rule define elements.</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#SecurityRuleDefineField"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField">Security rule define field.</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="UserHasRole">
+      <h3>User has Role<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/UserHasRole</p>
+      <div class="comment">
+         <span class="markdown">Object property that binds a user to the assigned roles.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasPrivilege"
+            title="https://w3id.org/OntoSecurityGraphDB/hasPrivilege">Has Privileges</a>
+      </li>
+      <li>
+         <a href="#privilegeCondition"
+            title="https://w3id.org/OntoSecurityGraphDB/privilegeCondition">Privilege has Condition</a>
+      </li>
+      <li>
+         <a href="#roleName" title="https://w3id.org/OntoSecurityGraphDB/roleName">Role has Name</a>
+      </li>
+      <li>
+         <a href="#ruleName" title="https://w3id.org/OntoSecurityGraphDB/ruleName">Rule has name</a>
+      </li>
+      <li>
+         <a href="#ruleSign" title="https://w3id.org/OntoSecurityGraphDB/ruleSign">Rule has sign</a>
+      </li>
+      <li>
+         <a href="#userName" title="https://w3id.org/OntoSecurityGraphDB/userName">user has name</a>
+      </li>
+      <li>
+         <a href="#userPass" title="https://w3id.org/OntoSecurityGraphDB/userPass">User has Password</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasPrivilege">
+      <h3>Has Privileges<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/hasPrivilege</p>
+      <div class="comment">
+         <span class="markdown">CRUD</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>{ "Create" , "Delete" , "Read" , "Update" }</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="privilegeCondition">
+      <h3>Privilege has Condition<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/privilegeCondition</p>
+      <div class="comment">
+         <span class="markdown">Specify if the privilege has condition</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Privilege" title="https://w3id.org/OntoSecurityGraphDB/Privilege">Privilege</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="roleName">
+      <h3>Role has Name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/roleName</p>
+      <div class="comment">
+         <span class="markdown">Indicate the name of the role.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Role" title="https://w3id.org/OntoSecurityGraphDB/Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ruleName">
+      <h3>Rule has name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/ruleName</p>
+      <div class="comment">
+         <span class="markdown">Indicate the name of the rule.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ruleSign">
+      <h3>Rule has sign<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/ruleSign</p>
+      <div class="comment">
+         <span class="markdown">Indicate the sign of the role.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRule"
+                  title="https://w3id.org/OntoSecurityGraphDB/SecurityRule">Rule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>{ "+" , "-" }</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="userName">
+      <h3>user has name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/userName</p>
+      <div class="comment">
+         <span class="markdown">Indicate the name of the user.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="userPass">
+      <h3>User has Password<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/OntoSecurityGraphDB/userPass</p>
+      <div class="comment">
+         <span class="markdown">Indicate the pass of the user.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#User" title="https://w3id.org/OntoSecurityGraphDB/User">User</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

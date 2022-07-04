@@ -1,0 +1,293 @@
+<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/OntoSecurityGraphDB/> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/OntoGraphDB/> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/created> "2022-06-30T13:24:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Alejandro Maté, (Universidad de Alicante)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Carlos Blanco, (Universidad de Cantabria)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Juan Trujillo, (Universidad de Alicante)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Manuel Paneque, (Universidad de Málaga)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "María del Mar Roldán-García, (Universiad de Málaga)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/issued> "2022-06-30T13:24:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/modified> "2022-06-30T13:24:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/publisher> "Aether Group" .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/rights> "(c) Aether Group" .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/title> "Security Graph Databases Ontology" .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "OntoSecurityGraphDB"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/OntoSecurityGraphDB/"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2000/01/rdf-schema#label> "Security Graph Databases Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/OntoGraphDB/hasDatatype
+<https://w3id.org/OntoGraphDB/hasDatatype> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologies.khaos.uma.es/bigowl/DataType> .
+# 
+# https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoGraphDB/Database> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the roles contained in that database." .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/2000/01/rdf-schema#label> "Database Has Role" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoGraphDB/Database> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the security rules contained in that database." .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule> <http://www.w3.org/2000/01/rdf-schema#label> "Database Has Security Rules" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoGraphDB/Database> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/User> .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the users contained in that database." .
+<https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser> <http://www.w3.org/2000/01/rdf-schema#label> "Database Has User" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/HasSubRole
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Allows defining hierarchies between roles." .
+<https://w3id.org/OntoSecurityGraphDB/HasSubRole> <http://www.w3.org/2000/01/rdf-schema#label> "Role Has Subrole" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/RoleHasRules
+<https://w3id.org/OntoSecurityGraphDB/RoleHasRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/RoleHasRules> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/RoleHasRules> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/RoleHasRules> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the role with the rules." .
+<https://w3id.org/OntoSecurityGraphDB/RoleHasRules> <http://www.w3.org/2000/01/rdf-schema#label> "Role has Rules" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the rule with the privilege that the rule grants or revokes" .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege> <http://www.w3.org/2000/01/rdf-schema#label> "Rule contains Privilege" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoGraphDB/Element> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/2000/01/rdf-schema#comment> "Security Rule define over elements." .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements> <http://www.w3.org/2000/01/rdf-schema#label> "Security rule define elements." .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRuleField> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoGraphDB/Field> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/2000/01/rdf-schema#comment> "Security Rule define over field." .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField> <http://www.w3.org/2000/01/rdf-schema#label> "Security rule define field." .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the rule to the database artifact in which it is defined." .
+# 
+# https://w3id.org/OntoSecurityGraphDB/UserHasRole
+<https://w3id.org/OntoSecurityGraphDB/UserHasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/OntoSecurityGraphDB/UserHasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/User> .
+<https://w3id.org/OntoSecurityGraphDB/UserHasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/UserHasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Object property that binds a user to the assigned roles." .
+<https://w3id.org/OntoSecurityGraphDB/UserHasRole> <http://www.w3.org/2000/01/rdf-schema#label> "User has Role" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/OntoSecurityGraphDB/hasPrivilege
+<https://w3id.org/OntoSecurityGraphDB/hasPrivilege> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/hasPrivilege> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/hasPrivilege> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Update" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Read" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Delete" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Create" .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/OntoSecurityGraphDB/hasPrivilege> <http://www.w3.org/2000/01/rdf-schema#comment> "CRUD" .
+<https://w3id.org/OntoSecurityGraphDB/hasPrivilege> <http://www.w3.org/2000/01/rdf-schema#label> "Has Privileges" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/privilegeCondition
+<https://w3id.org/OntoSecurityGraphDB/privilegeCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/privilegeCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/privilegeCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/OntoSecurityGraphDB/privilegeCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Specify if the privilege has condition" .
+<https://w3id.org/OntoSecurityGraphDB/privilegeCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Privilege has Condition" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/roleName
+<https://w3id.org/OntoSecurityGraphDB/roleName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/roleName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/Role> .
+<https://w3id.org/OntoSecurityGraphDB/roleName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/OntoSecurityGraphDB/roleName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the name of the role." .
+<https://w3id.org/OntoSecurityGraphDB/roleName> <http://www.w3.org/2000/01/rdf-schema#label> "Role has Name" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/ruleName
+<https://w3id.org/OntoSecurityGraphDB/ruleName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/ruleName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/ruleName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/OntoSecurityGraphDB/ruleName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the name of the rule." .
+<https://w3id.org/OntoSecurityGraphDB/ruleName> <http://www.w3.org/2000/01/rdf-schema#label> "Rule has name" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/ruleSign
+<https://w3id.org/OntoSecurityGraphDB/ruleSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/ruleSign> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/ruleSign> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#oneOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "-" .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "+" .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/OntoSecurityGraphDB/ruleSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the sign of the role." .
+<https://w3id.org/OntoSecurityGraphDB/ruleSign> <http://www.w3.org/2000/01/rdf-schema#label> "Rule has sign" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/userName
+<https://w3id.org/OntoSecurityGraphDB/userName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/userName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/User> .
+<https://w3id.org/OntoSecurityGraphDB/userName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/OntoSecurityGraphDB/userName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the name of the user." .
+<https://w3id.org/OntoSecurityGraphDB/userName> <http://www.w3.org/2000/01/rdf-schema#label> "user has name" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/userPass
+<https://w3id.org/OntoSecurityGraphDB/userPass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/OntoSecurityGraphDB/userPass> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/OntoSecurityGraphDB/User> .
+<https://w3id.org/OntoSecurityGraphDB/userPass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/OntoSecurityGraphDB/userPass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the pass of the user." .
+<https://w3id.org/OntoSecurityGraphDB/userPass> <http://www.w3.org/2000/01/rdf-schema#label> "User has Password" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/OntoGraphDB/Database
+<https://w3id.org/OntoGraphDB/Database> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/Database> <http://www.w3.org/2000/01/rdf-schema#label> "Database" .
+# 
+# https://w3id.org/OntoGraphDB/Element
+<https://w3id.org/OntoGraphDB/Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
+# 
+# https://w3id.org/OntoGraphDB/NoSQLField
+<https://w3id.org/OntoGraphDB/NoSQLField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/NoSQLField> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Field> .
+# 
+# https://w3id.org/OntoGraphDB/NoSQLFieldGraph
+<https://w3id.org/OntoGraphDB/NoSQLFieldGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/NoSQLFieldGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoGraphDB/NoSQLField> .
+# 
+# https://w3id.org/OntoGraphDB/Node
+<https://w3id.org/OntoGraphDB/Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoGraphDB/Element> .
+<https://w3id.org/OntoGraphDB/Node> <http://www.w3.org/2000/01/rdf-schema#label> "Node" .
+# 
+# https://w3id.org/OntoGraphDB/Relationship
+<https://w3id.org/OntoGraphDB/Relationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoGraphDB/Relationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoGraphDB/Element> .
+<https://w3id.org/OntoGraphDB/Relationship> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Create
+<https://w3id.org/OntoSecurityGraphDB/Create> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/Create> <http://www.w3.org/2000/01/rdf-schema#label> "Create" .
+<https://w3id.org/OntoSecurityGraphDB/Create> <http://www.w3.org/2000/01/rdf-schema#label> "This class represents the create privilege associated with a security rule." .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Delete
+<https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the delete privilege associated with a security rule." .
+<https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#label> "Delete" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Field
+<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/2000/01/rdf-schema#comment> "The Field class represents the concept of a security data field in any database." .
+<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Privilege
+<https://w3id.org/OntoSecurityGraphDB/Privilege> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Privilege> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the privileges associated with a security rule." .
+<https://w3id.org/OntoSecurityGraphDB/Privilege> <http://www.w3.org/2000/01/rdf-schema#label> "Privilege" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Read
+<https://w3id.org/OntoSecurityGraphDB/Read> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Read> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/Read> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the read privilege associated with a security rule." .
+<https://w3id.org/OntoSecurityGraphDB/Read> <http://www.w3.org/2000/01/rdf-schema#label> "Read" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Role
+<https://w3id.org/OntoSecurityGraphDB/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Role> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the roles that are defined in a database." .
+<https://w3id.org/OntoSecurityGraphDB/Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRule
+<https://w3id.org/OntoSecurityGraphDB/SecurityRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Security rule" .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that affects an element." .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement> <http://www.w3.org/2000/01/rdf-schema#label> "Rule element" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/SecurityRuleField
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleField> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/SecurityRule> .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleField> <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that affects a field." .
+<https://w3id.org/OntoSecurityGraphDB/SecurityRuleField> <http://www.w3.org/2000/01/rdf-schema#label> "Rule field" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/Update
+<https://w3id.org/OntoSecurityGraphDB/Update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/Update> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
+<https://w3id.org/OntoSecurityGraphDB/Update> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the update privilege associated with a security rule." .
+<https://w3id.org/OntoSecurityGraphDB/Update> <http://www.w3.org/2000/01/rdf-schema#label> "Update" .
+# 
+# https://w3id.org/OntoSecurityGraphDB/User
+<https://w3id.org/OntoSecurityGraphDB/User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/OntoSecurityGraphDB/User> <http://www.w3.org/2000/01/rdf-schema#comment> "The User class represents the users defined in the database management system." .
+<https://w3id.org/OntoSecurityGraphDB/User> <http://www.w3.org/2000/01/rdf-schema#label> "User" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

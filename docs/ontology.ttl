@@ -1,0 +1,318 @@
+@prefix : <https://w3id.org/OntoSecurityGraphDB/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/OntoSecurityGraphDB/> .
+
+<https://w3id.org/OntoSecurityGraphDB/> rdf:type owl:Ontology ;
+                                         owl:versionIRI <https://w3id.org/OntoSecurityGraphDB/> ;
+                                         owl:imports <https://w3id.org/OntoGraphDB/> ;
+                                         <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^rdfs:Literal ;
+                                         <http://purl.org/dc/terms/created> "2022-06-30T13:24:00"^^xsd:dateTime ;
+                                         <http://purl.org/dc/terms/creator> "Alejandro Maté, (Universidad de Alicante)"^^rdfs:Literal ,
+                                                                            "Carlos Blanco, (Universidad de Cantabria)"^^rdfs:Literal ,
+                                                                            "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"^^rdfs:Literal ,
+                                                                            "Juan Trujillo, (Universidad de Alicante)"^^rdfs:Literal ,
+                                                                            "Manuel Paneque, (Universidad de Málaga)"^^rdfs:Literal ,
+                                                                            "María del Mar Roldán-García, (Universiad de Málaga)"^^rdfs:Literal ;
+                                         <http://purl.org/dc/terms/issued> "2022-06-30T13:24:01"^^xsd:dateTime ;
+                                         <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^rdfs:Literal ;
+                                         <http://purl.org/dc/terms/modified> "2022-06-30T13:24:01"^^xsd:dateTime ;
+                                         <http://purl.org/dc/terms/publisher> "Aether Group" ;
+                                         <http://purl.org/dc/terms/rights> "(c) Aether Group" ;
+                                         <http://purl.org/dc/terms/title> "Security Graph Databases Ontology" ;
+                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "OntoSecurityGraphDB"^^rdfs:Literal ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/OntoSecurityGraphDB/"^^rdfs:Literal ;
+                                         rdfs:comment "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^rdfs:Literal ;
+                                         rdfs:label "Security Graph Databases Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/OntoGraphDB/hasDatatype
+<https://w3id.org/OntoGraphDB/hasDatatype> rdfs:range <http://www.ontologies.khaos.uma.es/bigowl/DataType> .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole
+:DatabaseHasRole rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/OntoGraphDB/Database> ;
+                 rdfs:range :Role ;
+                 rdfs:comment "This property links the roles contained in that database." ;
+                 rdfs:label "Database Has Role" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/DatabaseHasSecurityRule
+:DatabaseHasSecurityRule rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/OntoGraphDB/Database> ;
+                         rdfs:range :SecurityRule ;
+                         rdfs:comment "This property links the security rules contained in that database." ;
+                         rdfs:label "Database Has Security Rules" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser
+:DatabaseHasUser rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://w3id.org/OntoGraphDB/Database> ;
+                 rdfs:range :User ;
+                 rdfs:comment "This property links the users contained in that database." ;
+                 rdfs:label "Database Has User" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/HasSubRole
+:HasSubRole rdf:type owl:ObjectProperty ,
+                     owl:TransitiveProperty ;
+            rdfs:domain :Role ;
+            rdfs:range :Role ;
+            rdfs:comment "Allows defining hierarchies between roles." ;
+            rdfs:label "Role Has Subrole" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/RoleHasRules
+:RoleHasRules rdf:type owl:ObjectProperty ;
+              rdfs:domain :Role ;
+              rdfs:range :SecurityRule ;
+              rdfs:comment "This property links the role with the rules." ;
+              rdfs:label "Role has Rules" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege
+:SecurityRuleContainsPrivilege rdf:type owl:ObjectProperty ;
+                               rdfs:domain :SecurityRule ;
+                               rdfs:range :Privilege ;
+                               rdfs:comment "Links the rule with the privilege that the rule grants or revokes" ;
+                               rdfs:label "Rule contains Privilege" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements
+:SecurityRuleDefineElements rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :SecurityRuleDefined ;
+                            rdfs:domain :SecurityRuleElement ;
+                            rdfs:range <https://w3id.org/OntoGraphDB/Element> ;
+                            rdfs:comment "Security Rule define over elements." ;
+                            rdfs:label "Security rule define elements." .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField
+:SecurityRuleDefineField rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :SecurityRuleDefined ;
+                         rdfs:domain :SecurityRuleField ;
+                         rdfs:range <https://w3id.org/OntoGraphDB/Field> ;
+                         rdfs:comment "Security Rule define over field." ;
+                         rdfs:label "Security rule define field." .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefined
+:SecurityRuleDefined rdf:type owl:ObjectProperty ;
+                     rdfs:domain :SecurityRule ;
+                     rdfs:comment "Links the rule to the database artifact in which it is defined." .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/UserHasRole
+:UserHasRole rdf:type owl:ObjectProperty ;
+             rdfs:domain :User ;
+             rdfs:range :Role ;
+             rdfs:comment "Object property that binds a user to the assigned roles." ;
+             rdfs:label "User has Role" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/OntoSecurityGraphDB/hasPrivilege
+:hasPrivilege rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Privilege ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:oneOf [ rdf:type rdf:List ;
+                                       rdf:first "Create" ;
+                                       rdf:rest [ rdf:type rdf:List ;
+                                                  rdf:first "Delete" ;
+                                                  rdf:rest [ rdf:type rdf:List ;
+                                                             rdf:first "Read" ;
+                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                        rdf:first "Update" ;
+                                                                        rdf:rest rdf:nil
+                                                                      ]
+                                                           ]
+                                                ]
+                                     ]
+                         ] ;
+              rdfs:comment "CRUD" ;
+              rdfs:label "Has Privileges" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/privilegeCondition
+:privilegeCondition rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Privilege ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Specify if the privilege has condition" ;
+                    rdfs:label "Privilege has Condition" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/roleName
+:roleName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Role ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Indicate the name of the role." ;
+          rdfs:label "Role has Name" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/ruleName
+:ruleName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :SecurityRule ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Indicate the name of the rule." ;
+          rdfs:label "Rule has name" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/ruleSign
+:ruleSign rdf:type owl:DatatypeProperty ;
+          rdfs:domain :SecurityRule ;
+          rdfs:range [ rdf:type rdfs:Datatype ;
+                       owl:oneOf [ rdf:type rdf:List ;
+                                   rdf:first "+" ;
+                                   rdf:rest [ rdf:type rdf:List ;
+                                              rdf:first "-" ;
+                                              rdf:rest rdf:nil
+                                            ]
+                                 ]
+                     ] ;
+          rdfs:comment "Indicate the sign of the role." ;
+          rdfs:label "Rule has sign" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/userName
+:userName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :User ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Indicate the name of the user." ;
+          rdfs:label "user has name" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/userPass
+:userPass rdf:type owl:DatatypeProperty ;
+          rdfs:domain :User ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Indicate the pass of the user." ;
+          rdfs:label "User has Password" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/OntoGraphDB/Database
+<https://w3id.org/OntoGraphDB/Database> rdf:type owl:Class ;
+                                        rdfs:label "Database" .
+
+
+###  https://w3id.org/OntoGraphDB/Element
+<https://w3id.org/OntoGraphDB/Element> rdf:type owl:Class ;
+                                       rdfs:label "Element" .
+
+
+###  https://w3id.org/OntoGraphDB/NoSQLField
+<https://w3id.org/OntoGraphDB/NoSQLField> rdf:type owl:Class ;
+                                          rdfs:subClassOf :Field .
+
+
+###  https://w3id.org/OntoGraphDB/NoSQLFieldGraph
+<https://w3id.org/OntoGraphDB/NoSQLFieldGraph> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/OntoGraphDB/NoSQLField> .
+
+
+###  https://w3id.org/OntoGraphDB/Node
+<https://w3id.org/OntoGraphDB/Node> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/OntoGraphDB/Element> ;
+                                    rdfs:label "Node" .
+
+
+###  https://w3id.org/OntoGraphDB/Relationship
+<https://w3id.org/OntoGraphDB/Relationship> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/OntoGraphDB/Element> ;
+                                            rdfs:label "Relationship" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Create
+:Create rdf:type owl:Class ;
+        rdfs:subClassOf :Privilege ;
+        rdfs:label "Create" ,
+                   "This class represents the create privilege associated with a security rule." .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Delete
+:Delete rdf:type owl:Class ;
+        rdfs:subClassOf :Privilege ;
+        rdfs:comment "This class represents the delete privilege associated with a security rule." ;
+        rdfs:label "Delete" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Field
+:Field rdf:type owl:Class ;
+       rdfs:comment "The Field class represents the concept of a security data field in any database." ;
+       rdfs:label "Field" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Privilege
+:Privilege rdf:type owl:Class ;
+           rdfs:comment "This class represents the privileges associated with a security rule." ;
+           rdfs:label "Privilege" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Read
+:Read rdf:type owl:Class ;
+      rdfs:subClassOf :Privilege ;
+      rdfs:comment "This class represents the read privilege associated with a security rule." ;
+      rdfs:label "Read" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Role
+:Role rdf:type owl:Class ;
+      rdfs:comment "This class represents the roles that are defined in a database." ;
+      rdfs:label "Role" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRule
+:SecurityRule rdf:type owl:Class ;
+              rdfs:comment "Security rule" ;
+              rdfs:label "Rule" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleElement
+:SecurityRuleElement rdf:type owl:Class ;
+                     rdfs:subClassOf :SecurityRule ;
+                     rdfs:comment "A rule that affects an element." ;
+                     rdfs:label "Rule element" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/SecurityRuleField
+:SecurityRuleField rdf:type owl:Class ;
+                   rdfs:subClassOf :SecurityRule ;
+                   rdfs:comment "A rule that affects a field." ;
+                   rdfs:label "Rule field" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/Update
+:Update rdf:type owl:Class ;
+        rdfs:subClassOf :Privilege ;
+        rdfs:comment "This class represents the update privilege associated with a security rule." ;
+        rdfs:label "Update" .
+
+
+###  https://w3id.org/OntoSecurityGraphDB/User
+:User rdf:type owl:Class ;
+      rdfs:comment "The User class represents the users defined in the database management system." ;
+      rdfs:label "User" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
