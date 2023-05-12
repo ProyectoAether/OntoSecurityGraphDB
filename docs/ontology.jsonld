@@ -23,6 +23,9 @@
     } ]
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -39,10 +42,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/OntoGraphDB/NoSQLField",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/OntoSecurityGraphDB/Field"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/OntoGraphDB/NoSQLFieldGraph",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -66,11 +66,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/OntoGraphDB/Element"
-  } ]
-}, {
-  "@id" : "https://w3id.org/OntoGraphDB/hasDatatype",
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.ontologies.khaos.uma.es/bigowl/DataType"
   } ]
 }, {
   "@id" : "https://w3id.org/OntoSecurityGraphDB/",
@@ -102,6 +97,10 @@
     "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "María del Mar Roldán-García, (Universiad de Málaga)"
   } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."
+  } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2022-06-30T13:24:01"
@@ -131,10 +130,6 @@
     "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "https://w3id.org/OntoSecurityGraphDB/"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "@value" : "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Security Graph Databases Ontology"
   } ],
@@ -143,6 +138,10 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/OntoSecurityGraphDB/"
+  } ],
+  "https://schema.org/logo" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "https://proyectoaether.github.io/OntoSecurityGraphDB/OntoSecurityGraphDB.svg"
   } ]
 }, {
   "@id" : "https://w3id.org/OntoSecurityGraphDB/Create",
@@ -211,15 +210,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/OntoSecurityGraphDB/Privilege"
-  } ]
-}, {
-  "@id" : "https://w3id.org/OntoSecurityGraphDB/Field",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The Field class represents the concept of a security data field in any database."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Field"
   } ]
 }, {
   "@id" : "https://w3id.org/OntoSecurityGraphDB/HasSubRole",

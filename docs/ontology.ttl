@@ -17,6 +17,7 @@
                                                                             "Juan Trujillo, (Universidad de Alicante)"^^rdfs:Literal ,
                                                                             "Manuel Paneque, (Universidad de Málaga)"^^rdfs:Literal ,
                                                                             "María del Mar Roldán-García, (Universiad de Málaga)"^^rdfs:Literal ;
+                                         <http://purl.org/dc/terms/description> "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^rdfs:Literal ;
                                          <http://purl.org/dc/terms/issued> "2022-06-30T13:24:01"^^xsd:dateTime ;
                                          <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^rdfs:Literal ;
                                          <http://purl.org/dc/terms/modified> "2022-06-30T13:24:01"^^xsd:dateTime ;
@@ -25,12 +26,16 @@
                                          <http://purl.org/dc/terms/title> "Security Graph Databases Ontology" ;
                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "OntoSecurityGraphDB"^^rdfs:Literal ;
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/OntoSecurityGraphDB/"^^rdfs:Literal ;
-                                         rdfs:comment "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^rdfs:Literal ;
-                                         rdfs:label "Security Graph Databases Ontology" .
+                                         rdfs:label "Security Graph Databases Ontology" ;
+                                         <https://schema.org/logo> "https://proyectoaether.github.io/OntoSecurityGraphDB/OntoSecurityGraphDB.svg"^^rdfs:Literal .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
@@ -39,10 +44,6 @@
 #################################################################
 #    Object Properties
 #################################################################
-
-###  https://w3id.org/OntoGraphDB/hasDatatype
-<https://w3id.org/OntoGraphDB/hasDatatype> rdfs:range <http://www.ontologies.khaos.uma.es/bigowl/DataType> .
-
 
 ###  https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole
 :DatabaseHasRole rdf:type owl:ObjectProperty ;
@@ -222,8 +223,7 @@
 
 
 ###  https://w3id.org/OntoGraphDB/NoSQLField
-<https://w3id.org/OntoGraphDB/NoSQLField> rdf:type owl:Class ;
-                                          rdfs:subClassOf :Field .
+<https://w3id.org/OntoGraphDB/NoSQLField> rdf:type owl:Class .
 
 
 ###  https://w3id.org/OntoGraphDB/NoSQLFieldGraph
@@ -255,12 +255,6 @@
         rdfs:subClassOf :Privilege ;
         rdfs:comment "This class represents the delete privilege associated with a security rule." ;
         rdfs:label "Delete" .
-
-
-###  https://w3id.org/OntoSecurityGraphDB/Field
-:Field rdf:type owl:Class ;
-       rdfs:comment "The Field class represents the concept of a security data field in any database." ;
-       rdfs:label "Field" .
 
 
 ###  https://w3id.org/OntoSecurityGraphDB/Privilege

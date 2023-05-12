@@ -11,6 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:schema="https://schema.org/"
      xmlns:security="https://w3id.org/OntoSecurityGraphDB/"
      xmlns:databases="https://w3id.org/OntoGraphDB/">
     <owl:Ontology rdf:about="https://w3id.org/OntoSecurityGraphDB/">
@@ -24,6 +25,7 @@
         <p0:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Juan Trujillo, (Universidad de Alicante)</p0:creator>
         <p0:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Manuel Paneque, (Universidad de Málaga)</p0:creator>
         <p0:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">María del Mar Roldán-García, (Universiad de Málaga)</p0:creator>
+        <p0:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.</p0:description>
         <p0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T13:24:01</p0:issued>
         <p0:license rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://opensource.org/licenses/MIT</p0:license>
         <p0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T13:24:01</p0:modified>
@@ -32,8 +34,8 @@
         <p0:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security Graph Databases Ontology</p0:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">OntoSecurityGraphDB</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://w3id.org/OntoSecurityGraphDB/</vann:preferredNamespaceUri>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security Graph Databases Ontology</rdfs:label>
+        <schema:logo rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://proyectoaether.github.io/OntoSecurityGraphDB/OntoSecurityGraphDB.svg</schema:logo>
     </owl:Ontology>
     
 
@@ -46,6 +48,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
@@ -63,14 +71,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/OntoGraphDB/hasDatatype -->
-
-    <rdf:Description rdf:about="https://w3id.org/OntoGraphDB/hasDatatype">
-        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
-    </rdf:Description>
     
 
 
@@ -346,9 +346,7 @@
 
     <!-- https://w3id.org/OntoGraphDB/NoSQLField -->
 
-    <owl:Class rdf:about="https://w3id.org/OntoGraphDB/NoSQLField">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/OntoSecurityGraphDB/Field"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/OntoGraphDB/NoSQLField"/>
     
 
 
@@ -394,15 +392,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/OntoSecurityGraphDB/Privilege"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class represents the delete privilege associated with a security rule.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delete</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/OntoSecurityGraphDB/Field -->
-
-    <owl:Class rdf:about="https://w3id.org/OntoSecurityGraphDB/Field">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Field class represents the concept of a security data field in any database.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field</rdfs:label>
     </owl:Class>
     
 

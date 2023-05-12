@@ -9,6 +9,7 @@
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Juan Trujillo, (Universidad de Alicante)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Manuel Paneque, (Universidad de Málaga)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "María del Mar Roldán-García, (Universiad de Málaga)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/description> "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/issued> "2022-06-30T13:24:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/license> "https://opensource.org/licenses/MIT"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/modified> "2022-06-30T13:24:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -17,8 +18,8 @@
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/title> "Security Graph Databases Ontology" .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "OntoSecurityGraphDB"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/OntoSecurityGraphDB/"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2000/01/rdf-schema#label> "Security Graph Databases Ontology" .
+<https://w3id.org/OntoSecurityGraphDB/> <https://schema.org/logo> "https://proyectoaether.github.io/OntoSecurityGraphDB/OntoSecurityGraphDB.svg"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
 # 
 # #################################################################
@@ -27,6 +28,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -39,9 +43,6 @@
 # #
 # #################################################################
 # 
-# 
-# https://w3id.org/OntoGraphDB/hasDatatype
-<https://w3id.org/OntoGraphDB/hasDatatype> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologies.khaos.uma.es/bigowl/DataType> .
 # 
 # https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole
 <https://w3id.org/OntoSecurityGraphDB/DatabaseHasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -213,7 +214,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/OntoGraphDB/NoSQLField
 <https://w3id.org/OntoGraphDB/NoSQLField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/OntoGraphDB/NoSQLField> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Field> .
 # 
 # https://w3id.org/OntoGraphDB/NoSQLFieldGraph
 <https://w3id.org/OntoGraphDB/NoSQLFieldGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -240,11 +240,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/OntoSecurityGraphDB/Privilege> .
 <https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the delete privilege associated with a security rule." .
 <https://w3id.org/OntoSecurityGraphDB/Delete> <http://www.w3.org/2000/01/rdf-schema#label> "Delete" .
-# 
-# https://w3id.org/OntoSecurityGraphDB/Field
-<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/2000/01/rdf-schema#comment> "The Field class represents the concept of a security data field in any database." .
-<https://w3id.org/OntoSecurityGraphDB/Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field" .
 # 
 # https://w3id.org/OntoSecurityGraphDB/Privilege
 <https://w3id.org/OntoSecurityGraphDB/Privilege> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

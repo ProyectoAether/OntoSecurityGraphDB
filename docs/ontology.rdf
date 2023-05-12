@@ -7,7 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/OntoSecurityGraphDB/">
         <owl:versionIRI rdf:resource="https://w3id.org/OntoSecurityGraphDB/"/>
         <owl:imports rdf:resource="https://w3id.org/OntoGraphDB/"/>
@@ -19,6 +20,7 @@
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Juan Trujillo, (Universidad de Alicante)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Manuel Paneque, (Universidad de Málaga)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">María del Mar Roldán-García, (Universiad de Málaga)</terms:creator>
+        <terms:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T13:24:01</terms:issued>
         <terms:license rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://opensource.org/licenses/MIT</terms:license>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T13:24:01</terms:modified>
@@ -27,8 +29,8 @@
         <terms:title>Security Graph Databases Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">OntoSecurityGraphDB</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://w3id.org/OntoSecurityGraphDB/</vann:preferredNamespaceUri>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ontologie that generically encompass and represent the domain in security policies of graph-oriented database.</rdfs:comment>
         <rdfs:label>Security Graph Databases Ontology</rdfs:label>
+        <schema:logo rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://proyectoaether.github.io/OntoSecurityGraphDB/OntoSecurityGraphDB.svg</schema:logo>
     </owl:Ontology>
     
 
@@ -42,6 +44,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
@@ -61,15 +70,6 @@
      -->
 
 
-    
-
-
-    <!-- https://w3id.org/OntoGraphDB/hasDatatype -->
-
-
-    <rdf:Description rdf:about="https://w3id.org/OntoGraphDB/hasDatatype">
-        <rdfs:range rdf:resource="http://www.ontologies.khaos.uma.es/bigowl/DataType"/>
-    </rdf:Description>
     
 
 
@@ -367,9 +367,7 @@
     <!-- https://w3id.org/OntoGraphDB/NoSQLField -->
 
 
-    <owl:Class rdf:about="https://w3id.org/OntoGraphDB/NoSQLField">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/OntoSecurityGraphDB/Field"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/OntoGraphDB/NoSQLField"/>
     
 
 
@@ -420,16 +418,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/OntoSecurityGraphDB/Privilege"/>
         <rdfs:comment>This class represents the delete privilege associated with a security rule.</rdfs:comment>
         <rdfs:label>Delete</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/OntoSecurityGraphDB/Field -->
-
-
-    <owl:Class rdf:about="https://w3id.org/OntoSecurityGraphDB/Field">
-        <rdfs:comment>The Field class represents the concept of a security data field in any database.</rdfs:comment>
-        <rdfs:label>Field</rdfs:label>
     </owl:Class>
     
 
