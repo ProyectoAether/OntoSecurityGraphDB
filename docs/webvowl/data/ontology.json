@@ -7,7 +7,7 @@
       "undefined" : "Security Graph Databases Ontology"
     },
     "iri" : "https://w3id.org/OntoSecurityGraphDB/",
-    "author" : [ "Manuel Paneque, (Universidad de Málaga)", "María del Mar Roldán-García, (Universiad de Málaga)", "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)", "Carlos Blanco, (Universidad de Cantabria)", "Alejandro Maté, (Universidad de Alicante)", "Juan Trujillo, (Universidad de Alicante)" ],
+    "author" : [ "Manuel Paneque, (Universidad de Málaga)", "María del Mar Roldán-García, (Universiad de Málaga)", "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)", "David G. Rosado, (Universidad de Castilla - La Mancha)", "Carlos Blanco, (Universidad de Cantabria)", "Alejandro Maté, (Universidad de Alicante)", "Juan Trujillo, (Universidad de Alicante)" ],
     "description" : {
       "undefined" : "Ontologie that generically encompass and represent the domain in security policies of graph-oriented database."
     },
@@ -39,7 +39,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Carlos Blanco, (Universidad de Cantabria)",
+        "value" : "David G. Rosado, (Universidad de Castilla - La Mancha)",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -51,11 +51,16 @@
         "language" : "undefined",
         "value" : "Alejandro Maté, (Universidad de Alicante)",
         "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Carlos Blanco, (Universidad de Cantabria)",
+        "type" : "label"
       } ],
       "citation" : [ {
         "identifier" : "citation",
         "language" : "undefined",
-        "value" : "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB",
+        "value" : "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, David G. Rosado, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB",
         "type" : "label"
       } ],
       "created" : [ {
@@ -170,7 +175,7 @@
     "id" : "12",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "17",
+    "id" : "20",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
@@ -197,7 +202,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "17",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "74",
@@ -221,7 +226,7 @@
     "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "46",
@@ -273,7 +278,7 @@
       "IRI-based" : "NoSQLField",
       "undefined" : "NoSQL Field"
     },
-    "subClasses" : [ "20" ],
+    "subClasses" : [ "18" ],
     "comment" : {
       "undefined" : "Represent the specific NoSQL database type to which the field belongs."
     },
@@ -423,7 +428,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "17",
+    "id" : "20",
     "label" : {
       "IRI-based" : "string"
     }
@@ -504,7 +509,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "19",
+    "id" : "17",
     "label" : {
       "IRI-based" : "string"
     }
@@ -601,7 +606,7 @@
       "undefined" : "Represent the specific graph database type to which the field belongs."
     },
     "attributes" : [ "external" ],
-    "id" : "20",
+    "id" : "18",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/Create",
@@ -630,7 +635,7 @@
     "id" : "16",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "18",
+    "id" : "19",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "22",
@@ -705,7 +710,7 @@
     "id" : "63",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "64",
+    "id" : "65",
     "type" : "owl:objectProperty"
   }, {
     "id" : "66",
@@ -741,7 +746,7 @@
     "id" : "79",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "65",
+    "id" : "64",
     "type" : "owl:objectProperty"
   }, {
     "id" : "80",
@@ -759,7 +764,7 @@
     "comment" : {
       "undefined" : "Indicate a field that reference other field."
     },
-    "attributes" : [ "object", "external", "transitive" ],
+    "attributes" : [ "external", "object", "transitive" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/hasPrivilege",
@@ -803,23 +808,9 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "11"
   }, {
-    "iri" : "https://w3id.org/OntoGraphDB/hasValue",
-    "baseIri" : "https://w3id.org/OntoGraphDB",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "hasValue",
-      "undefined" : "Has Value"
-    },
-    "domain" : "6",
-    "comment" : {
-      "undefined" : "Indicate the value of the field."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "16"
-  }, {
     "iri" : "https://w3id.org/OntoGraphDB/databaseHasName",
     "baseIri" : "https://w3id.org/OntoGraphDB",
-    "range" : "19",
+    "range" : "17",
     "label" : {
       "IRI-based" : "databaseHasName",
       "undefined" : "Database Has Name"
@@ -829,7 +820,21 @@
       "undefined" : "Indicate the name of the database."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "18"
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/OntoGraphDB/hasValue",
+    "baseIri" : "https://w3id.org/OntoGraphDB",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "undefined" : "Has Value"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Indicate the value of the field."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/HasSubRole",
     "baseIri" : "https://w3id.org/OntoSecurityGraphDB",
@@ -880,7 +885,7 @@
     "comment" : {
       "undefined" : "This object property link the field with the type."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "29"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/privilegeCondition",
@@ -1013,7 +1018,7 @@
     "comment" : {
       "undefined" : "This property link the destination node that participate in a relationship."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "55"
   }, {
     "range" : "30",
@@ -1036,6 +1041,21 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
+    "iri" : "https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField",
+    "baseIri" : "https://w3id.org/OntoSecurityGraphDB",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "SecurityRuleDefineField",
+      "undefined" : "Security rule define field."
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "Security Rule define over field."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/DatabaseHasUser",
     "baseIri" : "https://w3id.org/OntoSecurityGraphDB",
     "range" : "48",
@@ -1048,22 +1068,7 @@
       "undefined" : "This property links the users contained in that database."
     },
     "attributes" : [ "object" ],
-    "id" : "63"
-  }, {
-    "iri" : "https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineField",
-    "baseIri" : "https://w3id.org/OntoSecurityGraphDB",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "SecurityRuleDefineField",
-      "undefined" : "Security rule define field."
-    },
-    "superproperty" : [ "65" ],
-    "domain" : "36",
-    "comment" : {
-      "undefined" : "Security Rule define over field."
-    },
-    "attributes" : [ "object" ],
-    "id" : "64"
+    "id" : "65"
   }, {
     "range" : "9",
     "domain" : "8",
@@ -1071,7 +1076,7 @@
     "id" : "66"
   }, {
     "range" : "6",
-    "domain" : "20",
+    "domain" : "18",
     "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
@@ -1086,7 +1091,7 @@
     "comment" : {
       "undefined" : "This property link the origin node that participate in a relationship."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "68"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/SecurityRuleContainsPrivilege",
@@ -1114,7 +1119,7 @@
     "comment" : {
       "undefined" : "This property link a graph database with their elements."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "71"
   }, {
     "iri" : "https://w3id.org/OntoGraphDB/fieldIsIndex",
@@ -1122,15 +1127,15 @@
     "range" : "72",
     "label" : {
       "IRI-based" : "fieldIsIndex",
-      "undefined" : "Field Is Index"
+      "undefined" : "Indicate is the field is an index."
     },
-    "domain" : "20",
+    "domain" : "18",
     "attributes" : [ "external", "datatype" ],
     "id" : "73"
   }, {
     "iri" : "https://w3id.org/OntoGraphDB/hasElementField",
     "baseIri" : "https://w3id.org/OntoGraphDB",
-    "range" : "20",
+    "range" : "18",
     "label" : {
       "IRI-based" : "hasElementField",
       "undefined" : "Has Element Field"
@@ -1139,7 +1144,7 @@
     "comment" : {
       "undefined" : "This property link specific element with graph Field."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "75"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/RoleHasRules",
@@ -1205,12 +1210,12 @@
       "IRI-based" : "SecurityRuleDefined"
     },
     "domain" : "37",
-    "subproperty" : [ "80", "64" ],
+    "subproperty" : [ "80", "63" ],
     "comment" : {
       "undefined" : "Links the rule to the database artifact in which it is defined."
     },
     "attributes" : [ "object" ],
-    "id" : "65"
+    "id" : "64"
   }, {
     "iri" : "https://w3id.org/OntoSecurityGraphDB/SecurityRuleDefineElements",
     "baseIri" : "https://w3id.org/OntoSecurityGraphDB",
@@ -1219,7 +1224,7 @@
       "IRI-based" : "SecurityRuleDefineElements",
       "undefined" : "Security rule define elements."
     },
-    "superproperty" : [ "65" ],
+    "superproperty" : [ "64" ],
     "domain" : "40",
     "comment" : {
       "undefined" : "Security Rule define over elements."

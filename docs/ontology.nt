@@ -1,10 +1,11 @@
 <https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/OntoSecurityGraphDB/> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/OntoGraphDB/> .
-<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, David G. Rosado, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/created> "2022-06-30T13:24:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Alejandro Maté, (Universidad de Alicante)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Carlos Blanco, (Universidad de Cantabria)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "David G. Rosado, (Universidad de Castilla - La Mancha)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Juan Trujillo, (Universidad de Alicante)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/OntoSecurityGraphDB/> <http://purl.org/dc/terms/creator> "Manuel Paneque, (Universidad de Málaga)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .

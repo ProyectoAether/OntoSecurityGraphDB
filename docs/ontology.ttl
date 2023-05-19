@@ -9,10 +9,11 @@
 <https://w3id.org/OntoSecurityGraphDB/> rdf:type owl:Ontology ;
                                          owl:versionIRI <https://w3id.org/OntoSecurityGraphDB/> ;
                                          owl:imports <https://w3id.org/OntoGraphDB/> ;
-                                         <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^rdfs:Literal ;
+                                         <http://purl.org/dc/terms/citation> "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, David G. Rosado, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"^^rdfs:Literal ;
                                          <http://purl.org/dc/terms/created> "2022-06-30T13:24:00"^^xsd:dateTime ;
                                          <http://purl.org/dc/terms/creator> "Alejandro Maté, (Universidad de Alicante)"^^rdfs:Literal ,
                                                                             "Carlos Blanco, (Universidad de Cantabria)"^^rdfs:Literal ,
+                                                                            "David G. Rosado, (Universidad de Castilla - La Mancha)"^^rdfs:Literal ,
                                                                             "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"^^rdfs:Literal ,
                                                                             "Juan Trujillo, (Universidad de Alicante)"^^rdfs:Literal ,
                                                                             "Manuel Paneque, (Universidad de Málaga)"^^rdfs:Literal ,

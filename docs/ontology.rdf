@@ -12,10 +12,11 @@
     <owl:Ontology rdf:about="https://w3id.org/OntoSecurityGraphDB/">
         <owl:versionIRI rdf:resource="https://w3id.org/OntoSecurityGraphDB/"/>
         <owl:imports rdf:resource="https://w3id.org/OntoGraphDB/"/>
-        <terms:citation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB</terms:citation>
+        <terms:citation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, David G. Rosado, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB</terms:citation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T13:24:00</terms:created>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Alejandro Maté, (Universidad de Alicante)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Carlos Blanco, (Universidad de Cantabria)</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">David G. Rosado, (Universidad de Castilla - La Mancha)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Juan Trujillo, (Universidad de Alicante)</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Manuel Paneque, (Universidad de Málaga)</terms:creator>

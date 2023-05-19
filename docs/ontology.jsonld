@@ -72,7 +72,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/citation" : [ {
     "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "@value" : "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"
+    "@value" : "Manuel Paneque, María del Mar Roldán-García, Carlos Blanco, Alejandro Maté, Eduardo Fernández-Medina, David G. Rosado, Juan Trujillo, (2022) - Ontology-based Secure Design for Graph-based Databases. W3ID. https://w3id.org/OntoSecurityGraphDB"
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -84,6 +84,9 @@
   }, {
     "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "Carlos Blanco, (Universidad de Cantabria)"
+  }, {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "David G. Rosado, (Universidad de Castilla - La Mancha)"
   }, {
     "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "Eduardo Fernández-Medina, (Universidad de Castilla - La Mancha)"
